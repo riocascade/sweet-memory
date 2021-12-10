@@ -20,7 +20,7 @@ const scriptsInEvents = {
 
 		async E_first_Event1_Act1(runtime, localVars)
 		{
-			globalThis.parent.postMessage({message: 'finish'}, "*");
+			globalThis.postMessage({message: 'finish'}, "*");
 			
 			globalThis.addEventListener ("message", function (event) {
 			if (event.data == "start_game") {
