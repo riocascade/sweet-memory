@@ -3884,7 +3884,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.NextPrevLayout,
 		C3.ScriptsInEvents.EventSheet1_Event35_Act3,
 		C3.Plugins.System.Cnds.TriggerOnce,
-		C3.Plugins.Browser.Acts.ExecJs,
 		C3.ScriptsInEvents.EventSheet1_Event36_Act2,
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Plugins.System.Acts.GoToLayout,
@@ -3894,7 +3893,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetLayerOpacity,
 		C3.Plugins.System.Cnds.LayerCmpOpacity,
 		C3.Plugins.System.Exps.layeropacity,
-		C3.Plugins.Browser.Exps.QueryParam
+		C3.ScriptsInEvents.E_first_Event1_Act1
 	];
 };
 self.C3_JsPropNameTable = [
@@ -3948,7 +3947,7 @@ self.C3_JsPropNameTable = [
 	{instance2: 0},
 	{isReady: 0},
 	{isFinish: 0},
-	{idstart: 0}
+	{isstart: 0}
 ];
 }
 
@@ -4159,7 +4158,6 @@ self.C3_ExpressionFuncs = [
 		() => 7,
 		() => "fadein",
 		() => "ENHORABUENA, HAS ENCONTRADO HUELLAS DE TROLL CERCA DE LA PISTA DE DESPEGUE",
-		() => "window.parent.postMessage({message: 'finish'}, '*');",
 		() => "BUTTONS",
 		p => {
 			const n0 = p._GetNode(0);
@@ -4183,12 +4181,7 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (f0("fadeScreen") - 2);
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("idstart");
-		},
-		() => "ok"
+		}
 ];
 
 
